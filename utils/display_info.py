@@ -9,7 +9,6 @@ def display_etappe(etappe, bruker_variabler):
         if (bruker_variabler[i].lower() == 'vind'):
             display_message += f" {etappe.vind} m/s"
     display_message += "\n"
-    # print(f"{etappe.time_start}-{etappe.time_end}: fra {etappe.low} til {etappe.high} grader (snittemperatur {etappe.temp} grader) {etappe.regn}mm regn {etappe.vind} m/s\n")
     print(display_message)
 
 def display_day(dag):
@@ -28,8 +27,6 @@ def display_day(dag):
     display_message += ":\n"
 
     print(display_message)
-    # print(f"{uke[dag.ukedag]} {dag.date_isoformat[8: 10]}.{month[int(dag.date_isoformat[5: 7]) - 1]} {dag.date_isoformat[0: 4]} (snittemperatur {dag.total_temp / dag.count} grader) : {dag.total_regn}mm regn snittvind {dag.total_vind / dag.count} m/s \n")
-    
     for i in range(len(dag.etapper)):
         display_etappe(dag.etapper[i], dag.bruker_variabler)
 
