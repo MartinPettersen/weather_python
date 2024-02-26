@@ -1,5 +1,3 @@
-
-
 import json
 
 def city_checker(city):
